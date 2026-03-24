@@ -31,6 +31,8 @@ defmodule KempaEcommerceWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug CORSPlug
+  plug CORSPlug,
+    origin: Application.compile_env(:kempa_ecommerce, :cors_origins, ["http://localhost:3000"])
+
   plug KempaEcommerceWeb.Router
 end

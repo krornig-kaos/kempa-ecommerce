@@ -177,7 +177,7 @@ defmodule KempaEcommerce.Payments.PaymentTransaction do
 
   defp generate_transaction_number do
     timestamp = DateTime.utc_now() |> Calendar.strftime("%Y%m%d%H%M%S")
-    random = :crypto.strong_rand_bytes(4) |> Base.encode16(case: :upper)
+    random = :crypto.strong_rand_bytes(8) |> Base.encode16(case: :upper)
     "TXN-#{timestamp}-#{random}"
   end
 end

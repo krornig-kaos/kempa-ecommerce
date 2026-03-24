@@ -160,7 +160,7 @@ defmodule KempaEcommerce.Ordering.Order do
 
   defp generate_order_number do
     timestamp = DateTime.utc_now() |> Calendar.strftime("%Y%m%d%H%M%S")
-    random = :crypto.strong_rand_bytes(4) |> Base.encode16(case: :upper)
+    random = :crypto.strong_rand_bytes(8) |> Base.encode16(case: :upper)
     "ORD-#{timestamp}-#{random}"
   end
 end

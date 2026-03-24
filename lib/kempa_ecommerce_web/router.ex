@@ -17,7 +17,7 @@ defmodule KempaEcommerceWeb.Router do
       schema: KempaEcommerceWeb.Schema
 
     # GraphiQL interactive interface (only in dev)
-    if Mix.env() in [:dev, :test] do
+    if Mix.env() == :dev do
       forward "/graphiql",
         Absinthe.Plug.GraphiQL,
         schema: KempaEcommerceWeb.Schema,
