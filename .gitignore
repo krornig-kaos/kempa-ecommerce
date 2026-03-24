@@ -1,0 +1,35 @@
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# Where third-party dependencies like PHX:/priv/static/assets are put.
+/priv/static/assets/
+
+# Ignore digested assets cache.
+/priv/static/cache_manifest.json
+
+# In case you use Node.js/Webpack to compile frontend.
+/assets/node_modules/
+
+# Ignore database artifacts.
+*.db
+*.db-journal
+
+# If using a .env file for local development secrets.
+.env
+
+# Generated on crash by the VM.
+erl_crash.dump
+
+# Files matching config/*.secret.exs pattern will be ignored.
+/config/*.secret.exs
+
+# Files matching config/*.secret.exs pattern are used for
+# having local development secrets that should be ignored.
+/config/dev.secret.exs
+/config/test.secret.exs
